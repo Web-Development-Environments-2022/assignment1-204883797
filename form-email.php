@@ -1,5 +1,6 @@
 <?php
-if($_POST["Message"]) {
+if($_POST["Message"]) 
+{
     mail("leahma@post.bgu.ac.il", "Form to email message", $_POST["Message"], $_POST["Email"]);
 }
 ?>
