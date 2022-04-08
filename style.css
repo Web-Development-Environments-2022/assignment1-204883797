@@ -65,6 +65,18 @@ h2
 	margin-bottom: 30px;
 }
 
+#mommom-pic, #wedding-pic
+{
+	float: right;
+	padding: 0 50px 0 16px;
+}
+
+#about-her
+{
+	padding-left: 50px;
+	font-size: 20px;
+}
+
 #contact-form
 {
 	background-image: url("image.png");
