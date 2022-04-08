@@ -18,20 +18,7 @@
         <br/>
         <br/>
         <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        about me
+        <h1 id="about-me-header"> About me </h1>
         <br/>
         <br/>
         <br/>
@@ -41,20 +28,7 @@
         <br/>
         <br/>
         <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        my photos
+        <h1 id="my-photos-header"> Photos </h1>
         <br/>
         <br/>
         <br/>
@@ -64,20 +38,13 @@
         <br/>
         <br/>
         <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        my playlist
+        <h1 id="my-playlist-header"> Playlist </h1>
+        <iframe width="560" height="315" 
+          src="https://www.youtube.com/embed/videoseries?list=PLC7BP2QZenrVUrZPciCuqma4JpL8mtP_B" 
+          title="YouTube video player" frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
         <br/>
         <br/>
         <br/>
@@ -87,20 +54,20 @@
         <br/>
         <br/>
         <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        give me a like
+        <h1 id="like-header"> Like My Page? </h1>
+        
+        <script>
+          var Clicks = 0 ;
+          function AddClick()
+          {
+            Clicks = Clicks + 1;
+            document.getElementById('CountedClicks').innerHTML = Clicks + ' Hits';
+          }
+        </script>
+
+        <span id="CountedClicks">0</span><br>
+        <br>
+        <button id="like-button" onclick="AddClick()"></button>
         <br/>
         <br/>
         <br/>
@@ -110,20 +77,8 @@
         <br/>
         <br/>
         <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        scan my code
+        <h1 id="scan-my-code-header"> Scan Code </h1>
+        <img id="qr" src="qrcode_17007040.png" alt="qr-code">
         <br/>
         <br/>
         <br/>
@@ -133,20 +88,7 @@
         <br/>
         <br/>
         <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        ans
+        <h1 id="ans-header"> Answers </h1>
         <br/>
         <br/>
         <br/>
@@ -158,18 +100,23 @@
         <br/>
         <br/>
         
-        <form action="https://formspree.io/f/xpzbjvej" method="post">
-          <!-- <input type="hidden" name="_next" value="thankyou.html"> -->
-          Enter Name:	<input type="text" id="Name" name="Name" required>
+        
+        <form id="contact-form" action="https://formspree.io/f/xpzbjvej" method="post">
+          <h1 id="contact-header"> Contact me </h1>
+          <label id="ContactName">Enter Your Name:</label> 	
+          <br/> <input type="text" name="Name" required>
           <br/>
           <br/>
-          Enter Email Address:	<input type="email" id="Email" name="Email" required>
+          <label id="ContactEmail">Enter Your Email Address:</label> 
+          <br/> <input type="email" name="Email" required>
           <br/>
           <br/>
-          Enter Message:	<textarea id="Message" name="Message" rows="6" maxlength="3000" placeholder="write your message here" required></textarea>
+          <label id="ContactMessage">Enter Message:</label> 	
+          <br/> <textarea name="Message" rows="6" maxlength="3000" placeholder="write your message here" required></textarea>
           <br/>
           <br/>
-          <button type="submit">Send</button>
+          <button type="reset" id="reset-button">Reset</button>
+          <button type="submit" id="submit-button">Send</button>
         </form>
         
         <br/>

@@ -4,6 +4,7 @@
 	width: 100%;
 	height: 35px;
 	background-color: lightskyblue;
+	background-image: url("image.png");
 	list-style-type: none;
 	top: 0;
 	padding-top: 16px;
@@ -15,6 +16,8 @@
 	padding-right: 16px;
 	color: black;
 	text-decoration: none;
+	font-size: large;
+	
 	
 }
 
@@ -25,4 +28,108 @@
 	
 }
 
+#contact-header, #about-me-header, #my-photos-header, #my-playlist-header, #like-header, #scan-my-code-header, #ans-header
+{
+	color: black;
+}
 
+#contact-form
+{
+	background-image: url("image.png");
+	display: inline-block;
+	width: 500px;
+	border: 3px solid black;
+	box-sizing: border-box;
+	background-size: cover;
+}
+
+#contact-form label
+{
+	color: black;
+    font-size: large;
+}
+
+#contact-form input, #contact-form textarea
+{
+	width: 300px;
+	resize: none;
+}
+
+body 
+{
+	background-image: url("body.png");
+	align-items: center;
+    text-align: center;
+	background-color: lightskyblue;
+	background-size: cover;
+	
+}
+
+#submit-button, #reset-button
+{
+	background-color: lightskyblue;
+	color: black;
+	padding: 16px 32px;
+	text-decoration: none;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+
+#submit-button:hover, #reset-button:hover
+{
+	color: white;
+	display: inline-block;
+}
+
+#photos, #playlist, #like, #qrcoder, #spa 
+{
+	width: 100%;
+	color: black;
+	border-top: 2px solid black;
+
+}
+
+#like-button
+{
+	border: 0px;
+	width: 30px;
+	height: 30px;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+	background-color: pink;
+}
+
+#like-button:before, #like-button::after
+{
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	content: '';
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+	-o-border-radius: 100%;
+	border-radius: 100%;
+	background-color: pink;
+}
+
+#like-button:before
+{
+  bottom: 0px;
+  left: -20px;
+  
+}
+
+#like-button:after
+{
+  top: -20px;
+  right: 0px;
+}
+
+#qr
+{
+	width: 300px;
+	height: 300px;
+}
