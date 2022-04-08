@@ -5,6 +5,7 @@
 	height: 35px;
 	background-color: lightskyblue;
 	background-image: url("image.png");
+	background-size: cover;
 	list-style-type: none;
 	top: 0;
 	padding-top: 16px;
@@ -28,9 +29,40 @@
 	
 }
 
-#contact-header, #about-me-header, #my-photos-header, #my-playlist-header, #like-header, #scan-my-code-header, #ans-header
+h1 
 {
-	color: black;
+	font-family: 'Dancing Script', cursive;
+	font-size: 80px;
+	margin-bottom: 30px;
+    position: relative;
+    font-size: 30px;
+    z-index: 1;
+    overflow: hidden;
+    text-align: center;
+}
+
+h1:before, h1:after 
+{
+    position: absolute;
+    top: 51%;
+    overflow: hidden;
+    width: 30%;
+    height: 3px;
+    content: '\a0';
+    background-color: black;
+}
+
+h1:before 
+{
+    margin-left: -30%;
+    text-align: right;
+}
+
+h2
+{
+	font-family: 'Dancing Script', cursive;
+	font-size: 30px;
+	margin-bottom: 30px;
 }
 
 #contact-form
@@ -55,14 +87,20 @@
 	resize: none;
 }
 
-body 
+body
 {
 	background-image: url("body.png");
 	align-items: center;
-    text-align: center;
+    /* text-align: center; */
 	background-color: lightskyblue;
 	background-size: cover;
 	
+}
+
+section:not(#about, #spa)
+{
+	align-items: center;
+    text-align: center;
 }
 
 #submit-button, #reset-button
@@ -79,14 +117,6 @@ body
 {
 	color: white;
 	display: inline-block;
-}
-
-#photos, #playlist, #like, #qrcoder, #spa 
-{
-	width: 100%;
-	color: black;
-	border-top: 2px solid black;
-
 }
 
 #like-button
