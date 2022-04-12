@@ -75,7 +75,7 @@ h2
 	padding: 0.5% 5% 0.5% 2%;
 }
 
-#wedding-pic
+#wedding-pic, #webs
 {
 	float: left;
 	padding: 0.1% 2% 0.2% 0.5%;
@@ -90,15 +90,32 @@ h2
 h3
 {
 	font-family: 'Dancing Script', cursive;
-	font-size: 20px;
+	font-size: 25px;
+	padding-right: 1.5%;
 }
 
-#web1, #web2
+#webs-table, #dif-webs, #dif-webs-usecases
+{
+	align-items: center;
+    text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+	table-layout: fixed;
+}
+
+#web1, #web2, #web3, th, td
 {
 	direction: rtl;
 	padding-right: 1.5%;
 	font-size: 20px;
 	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#dif-webs, th, td, #dif-webs-usecases
+{
+	border:1px solid black;
+
 }
 
 #contact
