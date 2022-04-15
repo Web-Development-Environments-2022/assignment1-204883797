@@ -72,18 +72,19 @@ h2
 {
 	float: right;
 	/* padding: top right bottom left; */
-	padding: 0.5% 5% 0.5% 2%;
+	padding: 0.2% 5% 0.5% 2%;
 }
 
-#wedding-pic, #webs
+#wedding-pic
 {
 	float: left;
-	padding: 0.1% 2% 0.2% 0.5%;
+	padding: 0.2% 2% 0.2% 0.2%;
 }
 
 #about-her
 {
 	padding-left: 5%;
+	padding-right: 5%;
 	font-size: 20px;
 }
 
@@ -91,7 +92,7 @@ h3
 {
 	font-family: 'Dancing Script', cursive;
 	font-size: 25px;
-	padding-right: 1.5%;
+	padding-right: 5%;
 }
 
 #webs-table, #dif-webs, #dif-webs-usecases
@@ -107,15 +108,24 @@ h3
 #web1, #web2, #web3, th, td
 {
 	direction: rtl;
-	padding-right: 1.5%;
+	padding-right: 5%;
+	padding-left: 5%;
 	font-size: 20px;
 	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-#dif-webs, th, td, #dif-webs-usecases
+#dif-webs, th, td
 {
 	border:1px solid black;
+}
 
+#webs-usecase-content
+{
+	font-size: 20px;
+	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	text-align: right;
+	padding-right: 5%;
+	padding-left: 5%;
 }
 
 #contact
@@ -189,7 +199,7 @@ section:not(#about, #spa)
 	-ms-transform: rotate(45deg);
 	-o-transform: rotate(45deg);
 	transform: rotate(45deg);
-	background-color: pink;
+	background-color: palevioletred;
 }
 
 #like-button:before, #like-button::after
@@ -202,7 +212,7 @@ section:not(#about, #spa)
 	-moz-border-radius: 100%;
 	-o-border-radius: 100%;
 	border-radius: 100%;
-	background-color: pink;
+	background-color: palevioletred;
 }
 
 #like-button:before
@@ -222,4 +232,11 @@ section:not(#about, #spa)
 {
 	width: 300px;
 	height: 300px;
+}
+
+#webs
+{
+	float: left;
+	/* padding: top right bottom left; */
+	padding: 0.2% 2% 0.2% 5%;
 }

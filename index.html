@@ -20,13 +20,12 @@
       <section id="about" class="section">
         <br/>
         <h1 id="about-me-header"> &#160 About Her &#10084 &#160 </h1>
+        <img id="mommom-pic" src="mommom-pics\pic-2.JPG" width="400px"/>
         <p id="about-her"> Bryna was born on March 24, 1940 in Philadelphia. 
           She was named Bryna Sandra Zappel, Bryna after her great grandmother and Sandra after her aunt.
           <br />Her childhood home was an apartment over a paint and hardware store. 
+          <br />So each morning when first waking up, she had to quickly get dressed because her father used to bring clients up to the kitchen while he finished his breakfast.
           <br />Her family didn't have enough money to heat up their house, so they used coal for lighting fires.
-          <img id="mommom-pic" src="mommom-pics\pic-2.JPG" width="400px"/>
-          <br />Each morning when first waking up, she had to quickly get dressed because her father used to bring clients up to the kitchen while he finished his breakfast.
-          <br />One day coming back from school, her father was on a ladder reaching for paint and the whole shelve with all the paints fell on top of him. 
           <br>
           <br />When Bryna started going to school, World War II began. But thankfully her city wasn't hit.
           <br />In her locker at school she would put blankets, toys, coloring aids and a book so that if there were bombings they would run to the hall and sit there until it was over.
@@ -34,9 +33,10 @@
           <br>
           <br />In school they had to shower after gym class (they had a 10 minute break for it), and if she didn't shower, they would write a warning.
           <br />They also had sewing and cooking classes where she made a dress and a bib.
-          <br>
-          <br />Bryna used to sell cookies to earn money for trips and different activities.
+          <br />One day coming back from school, her father was on a ladder reaching for paint and the whole shelve with all the paints fell on top of him. 
+          <br> <br />
           <img id="wedding-pic" src="mommom-pics\mom1.jpg" height="400px"/>
+          Bryna used to sell cookies to earn money for trips and different activities.
           <br />She was in charge of watching for cars when the kids were crossing.
           She also had a job answering the phone for the principal.
           <br />Her childhood games were: jump rope, dodge ball, and kick-the-can.
@@ -93,11 +93,30 @@
         <h1 id="like-header"> &#160 Like My Page? &#160 </h1>
         
         <script>
-          var Clicks = 0 ;
+          var fileName = "https://github.com/Web-Development-Environments-2022/assignment1-leahmashi/blob/main/storeCounts.txt"
+          var Clicks = 0;
           function AddClick()
           {
+            // if (typeof(Storage) !== "undefined") 
+            // {
+            //   if (localStorage.clickcount) { localStorage.clickcount = Number(localStorage.clickcount) + 1; } 
+            //   else { localStorage.clickcount = 1; }
+            //   document.getElementById("CountedClicks").innerHTML = localStorage.clickcount;
+            // } 
+            // else { document.getElementById("CountedClicks").innerHTML = "Sorry, your browser does not support web storage..."; }
+            var file = new File(fileName);
+            file.open("r");
+            while (!file.eof) 
+            { // read each line of text 
+              str += file.readln() + "\n"; 
+            }
+            document.getElementById('CountedClicks').innerHTML = str;
+            file.close();
+            file.open("w"); 
             Clicks = Clicks + 1;
-            document.getElementById('CountedClicks').innerHTML = Clicks + ' Hits';
+            file.writeln(Clicks);
+            file.close();
+            document.getElementById('CountedClicks').innerHTML = str;
           }
         </script>
 
@@ -170,46 +189,18 @@ web 2.0 הינו פלטפורמה שבה נבנו טכנולוגיות ומרח�
           </table>
           <br/>
         </section>
-        <section id="webs-usecases" class="section">
-          <h3>Different Use Cases In The Webs</h3>
-          <table id="dif-webs-usecases">
-            <tr>
-              <th>Use Case</th>
-              <th>Web 1.0</th>
-              <th>Web 2.0</th>
-              <th>Web 3.0</th>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td dir="rtl"></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-          </table>
-          <br/>
+        <section id="webs-usecase" class="section">
+          <h3>Differences Via Use Case In The Webs</h3>
+            <p dir="rtl" id="webs-usecase-content">
+              עבור השאילתא "תופעות לוואי של תרופות": <br> בweb 1.0 יופיע עמוד סטטי עם מידע על תרופות שונות ותופעות הלוואי שלהן. <br>
+               בweb 2.0  בנוסף למידע תהיה אפשרות להוספת תגובה על תופעות הלוואי. <br>
+              בweb 3.0 תופיע גם האפשרות לקנות את התרופה.
+            </p>
         </section>
-
       </section>
 
       <!-- contact me option via formspree with name, email, imoji and message -->
       <section id="contact" class="section">
-        <br>
-        <br>
         <form id="contact-form" action="https://formspree.io/f/xpzbjvej" method="post">
           <h2 id="contact-header"> &#160 Contact me &#160 </h2>
           <label id="ContactName">Enter Your Name:</label> 	
