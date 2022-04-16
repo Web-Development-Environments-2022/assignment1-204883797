@@ -5,6 +5,9 @@
       <meta charset="UTF-8">
     </head>
     <body>
+      <!-- <div id="fb-root"></div>
+      <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v13.0" nonce="WxQlt6pB"></script> -->
+
       <!-- menu -->
       <div id="menu">
         <a href="#about">About Her</a>
@@ -92,8 +95,12 @@
         <br/>
         <h1 id="like-header"> &#160 Like My Page? &#160 </h1>
         
+        <!-- <div class="fb-like" data-href="https://web-development-environments-2022.github.io/assignment1-leahmashi/" 
+          data-width="" data-layout="box_count" data-action="like" data-size="large" data-share="true">
+        </div> -->
+
         <script>
-          var fileName = "https://github.com/Web-Development-Environments-2022/assignment1-leahmashi/blob/main/storeCounts.txt"
+          var fileName = "storeCounts.txt"
           var Clicks = 0;
           function AddClick()
           {
@@ -104,19 +111,23 @@
             //   document.getElementById("CountedClicks").innerHTML = localStorage.clickcount;
             // } 
             // else { document.getElementById("CountedClicks").innerHTML = "Sorry, your browser does not support web storage..."; }
-            var file = new File(fileName);
-            file.open("r");
-            while (!file.eof) 
-            { // read each line of text 
-              str += file.readln() + "\n"; 
-            }
-            document.getElementById('CountedClicks').innerHTML = str;
-            file.close();
-            file.open("w"); 
+            document.getElementById('CountedClicks').innerHTML = Clicks;
+            var fso, fileHandle;
+            fso = new ActiveXObject("Scripting.FileSystemObject");
+            fileHandle = fso.CreateTextFile(fileName, true);
+            fileHandle.write(Clicks);
+            fileHandle.close();
+
+            // var fso = new ActiveXObject("Scripting.FileSystemObject");
+            // var s = fso.OpenTextFile(fileName, 1, true);
+            // s.WriteLine(Clicks.toString());
+            // s.Close();
+            // document.getElementById('CountedClicks').innerHTML = Clicks;
+            // Clicks = document.getElementById('CountedClicks');
             Clicks = Clicks + 1;
-            file.writeln(Clicks);
-            file.close();
-            document.getElementById('CountedClicks').innerHTML = str;
+            // fileName.writeline(Clicks);
+            // fileName.Close();
+            document.getElementById('CountedClicks').innerHTML = Clicks;
           }
         </script>
 
