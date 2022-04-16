@@ -99,8 +99,8 @@
           data-width="" data-layout="box_count" data-action="like" data-size="large" data-share="false">
         </div>
 
-        <!-- <script>
-          var fileName = "storeCounts.txt"
+        <script>
+          // var fileName = "storeCounts.txt"
           var Clicks = 0;
           function AddClick()
           {
@@ -111,12 +111,12 @@
             //   document.getElementById("CountedClicks").innerHTML = localStorage.clickcount;
             // } 
             // else { document.getElementById("CountedClicks").innerHTML = "Sorry, your browser does not support web storage..."; }
-            document.getElementById('CountedClicks').innerHTML = Clicks;
-            var fso, fileHandle;
-            fso = new ActiveXObject("Scripting.FileSystemObject");
-            fileHandle = fso.CreateTextFile(fileName, true);
-            fileHandle.write(Clicks);
-            fileHandle.close();
+            // document.getElementById('CountedClicks').innerHTML = Clicks;
+            // var fso, fileHandle;
+            // fso = new ActiveXObject("Scripting.FileSystemObject");
+            // fileHandle = fso.CreateTextFile(fileName, true);
+            // fileHandle.write(Clicks);
+            // fileHandle.close();
 
             // var fso = new ActiveXObject("Scripting.FileSystemObject");
             // var s = fso.OpenTextFile(fileName, 1, true);
@@ -124,16 +124,24 @@
             // s.Close();
             // document.getElementById('CountedClicks').innerHTML = Clicks;
             // Clicks = document.getElementById('CountedClicks');
-            Clicks = Clicks + 1;
-            // fileName.writeline(Clicks);
-            // fileName.Close();
-            document.getElementById('CountedClicks').innerHTML = Clicks;
+            // Clicks = Clicks + 1;
+            // // fileName.writeline(Clicks);
+            // // fileName.Close();
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "https://api.countapi.xyz/hit/https://web-development-environments-2022.github.io/assignment1-leahmashi/awesomeclick");
+            xhr.responseType = "json";
+            xhr.onload = function() 
+            {
+              // Clicks = Clicks + 1;
+              document.getElementById('CountedClicks').innerHTML = this.response.value;
+            }
+            xhr.send();
           }
-        </script> -->
+        </script>
 
-        <!-- <span id="CountedClicks">0</span><br>
+        <span id="CountedClicks">0</span><br>
         <br>
-        <button id="like-button" onclick="AddClick()"></button> -->
+        <button id="like-button" onclick="AddClick()"></button>
       </section>
 
       <!-- qr code to reach the site -->
