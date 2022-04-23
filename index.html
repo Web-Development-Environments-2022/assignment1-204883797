@@ -231,7 +231,7 @@ web 2.0 הינו פלטפורמה שבה נבנו טכנולוגיות ומרח�
           <br/>
           <br/>
           <label id="ContactEmoji">Select To Add Emoji:</label> 	
-          <br/> <select name="Emoji" id="Emoji">
+          <br/> <select name="Emoji" id="Emoji" onchange="addToTextarea()">
             <option name="none" value=""></option>
             <option name="heart" value=&#128151>&#128151</option>
             <option name="smiling" value=&#128515>&#128515</option>
@@ -241,10 +241,19 @@ web 2.0 הינו פלטפורמה שבה נבנו טכנולוגיות ומרח�
             <option name="cool" value=&#128526>&#128526</option>
             <option name="like" value=&#128077>&#128077</option>
           </select>
+          <button type="button" onclick="addToTextarea();">Add</button>
+          <script>
+            function addToTextarea() 
+            {
+              var emoji = (document.getElementById("Emoji")).value;
+              var currentText = document.getElementById("Message");
+              currentText.value += emoji;
+            }
+          </script>
           <br/>
           <br/>
           <label id="ContactMessage">Enter Message:</label> 	
-          <br/> <textarea name="Message" rows="6" maxlength="3000" placeholder="write your message here" required></textarea>
+          <br/> <textarea id="Message" name="Message" rows="6" maxlength="3000" placeholder="write your message here" required></textarea>
           <br/>
           <br/>
           <button type="reset" id="reset-button">Reset</button>
